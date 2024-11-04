@@ -1,0 +1,131 @@
+﻿body {
+    background-color: #1c1e21;
+    color: #d1d1d1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .header .title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+td {
+    text-align: left;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    position: relative;
+}
+
+    td:hover {
+        background-color: #3a3b3c;
+    }
+
+        td:hover .custom-select {
+            background-color: #3a3b3c;
+        }
+
+.select-option select {
+    background-color: #1c1e21;
+    color: #d1d1d1;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    .select-option select:focus {
+        background-color: #3a3b3c;
+        outline: none;
+    }
+
+.add::before {
+    content: '•';
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.add:hover::before {
+    content: '+';
+    font-size: 20px;
+    color: #ffffff;
+    margin-left: 15px;
+}
+
+.tag {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+.tag-green {
+    background-color: #43A047;
+}
+
+.label {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.label-green {
+    background-color: #2ecc71;
+}
+
+.option {
+    background-color: #1c1e21;
+    color: #d1d1d1;
+}
+.edit-icon {
+    font-size: 16px;
+    margin-left: 10px;
+    color: #d1d1d1;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+td:hover .edit-icon {
+    display: inline;
+    cursor: pointer;
+}
+
+.edit-icon i {
+    font-size: 13px;
+    color: #d1d1d1;
+}
+
+    .edit-icon i:hover {
+        color: #ffffff;
+    }

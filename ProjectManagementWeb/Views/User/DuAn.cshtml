@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    <link href="~/Content/css/User/CSSDuAn.css" rel="stylesheet" />
+}
+
+<div class="main-content-home">
+    <div class="workspace-header">
+        <div class="left">
+            <img alt="Workspace Icon" height="40" src="~/Content/images/workspace.png" width="40" />
+            <h2>Không gian làm việc</h2>
+        </div>
+        <div class="right">
+            <button>Mời các thành viên tham gia không gian làm việc</button>
+        </div>
+    </div>
+    <p style="margin-bottom:20px;font-size:25px">Dự án</p>
+
+    <div class="board-section">
+        <div class="left">
+            <p style="margin-bottom:10px;font-size:14px">Sắp xếp theo</p>
+            <select>
+                <option>Hoạt động gần đây nhất</option>
+                <option>Ít hoạt động gần đây</option>
+                <option>Theo bảng chữ cái A-Z</option>
+                <option>Theo bảng chữ cái Z-A</option>
+            </select>
+        </div>
+        <div class="right">
+            <p style="margin-bottom:10px;font-size:14px">Tìm kiếm</p>
+            <input placeholder="Tìm kiếm các bảng" type="text" />
+        </div>
+    </div>
+    <div class="boards">
+        <div class="board create">Tạo bảng mới</div>
+    </div>
+</div>
+

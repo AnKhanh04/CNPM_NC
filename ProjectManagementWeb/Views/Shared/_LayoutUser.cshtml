@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="~/Content/css/User/CSSUser.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="left">
+            <a href="@Url.Action("DuAn","User")"><img src="~/Content/images/logo_syncmaster.png" style="width:43px" /></a>
+            <a href="@Url.Action("DuAn","User")" style="font-size:23px">SyncMaster</a>
+            <a href="#">Gần đây</a>
+            <a href="#">Đã đánh dấu sao</a>
+            <a href="#">Tạo mới</a>
+        </div>
+        <div class="right">
+            <div class="profile">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user-circle" id="avatar-btn"></i>
+                <div class="menu" id="menu">
+                    <p>Tài khoản</p>
+                    <hr>
+                    <ul>
+                        <li>
+                            <a href="#" class="avt-option">
+                                <div>
+                                    Quản lý tài khoản
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="avt-option">
+                                <div>Cài đặt</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <a href="@Url.Action("Index","User")" class="log-out">
+                        <div>
+                            Đăng xuất
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" style="display:flex">
+        <div class="sidebar" style="display:block">
+            <div class="section">
+                <div style="padding: 8px 12px 8px; display: flex; align-items: center; min-height: 40px; border-bottom: 1px; border-style: solid; border-color: #9C9C9C; ">
+                    <img src="~/Content/images/workspace.png" style=" width:34px" />
+                    <h1>Không gian làm việc</h1>
+                </div>
+                <a href="@Url.Action("DuAn","User")" class="section3">
+                    <div class="section2">
+                        <div class="section1">
+                            <i class="fas fa-folder-open me-2"></i>
+                            Dự án
+                        </div>
+                    </div>
+                </a>
+                <a href="@Url.Action("ThanhVien","User")" class="section3">
+                    <div class="section2">
+                        <div class="section1">
+                            <i class="fas fa-users me-2"></i>
+                            Thành viên
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="section">
+                <h3>Dạng xem Không gian làm việc</h3>
+                <a href="@Url.Action("NhiemVu","User")" class="section3">
+                    <div class="section2">
+                        <div class="section1">
+                            <i class="fas fa-table me-2"></i>
+                            Bảng nhiệm vụ
+                        </div>
+                    </div>
+                </a>
+                <a href="@Url.Action("Lich","User")" class="section3">
+                    <div class="section2">
+                        <div class="section1">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            Lịch
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="section" style="display:flex;align-items:center">
+                <h3 style="flex:1">Các dự án của bạn</h3>
+                <div style="margin-right: 15px">
+                    <button>
+                        <img src="~/Content/images/ic_add.png" style="width:15px" />
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-main">
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/Content/JS/JSUser.js"></script>
+</body>
+</html>

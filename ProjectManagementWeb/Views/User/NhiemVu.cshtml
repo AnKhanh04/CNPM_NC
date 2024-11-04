@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "NhiemVu";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    <link href="~/Content/css/User/CSSNhiemVu.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/Content/JS/JSNhiemVu.js"></script>
+}
+
+<div class="container">
+    <div class="header">
+        <div class="title">Bảng nhiệm vụ</div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Thẻ</th>
+                <th>Danh sách</th>
+                <th>Nhãn</th>
+                <th>Thành viên</th>
+                <th>Ngày hết hạn</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div style="padding:15px">
+                        <span class="tag tag-green"></span>
+                        Họp khởi động
+                        <span class="edit-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="select-option">
+                        <select class="custom-select" style="background-color: #1c1e21; width:100%;">
+                            <option class="option" value="can-lam">Cần làm</option>
+                            <option class="option" value="dang-lam">Đang làm</option>
+                            <option class="option" value="hoan-thanh">Hoàn thành</option>
+                        </select>
+                    </div>
+                </td>
+                <td class="add"></td>
+                <td class="add"></td>
+                <td class="add"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

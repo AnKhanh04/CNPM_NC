@@ -1,0 +1,105 @@
+﻿
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url('../../images/bg_relog.png');
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+}
+
+
+.container {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .logo img {
+        width: 100px;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #43A047;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+        .form-group button:hover {
+            background-color: #388E3C;
+        }
+
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .social-login a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+        color: #333;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        .social-login a:hover {
+            background-color: #f0f0f0;
+        }
+
+    .social-login img {
+        margin-right: 8px
+    }
+
+.resetpassword {
+    margin-top: 10px;
+    text-align: center
+}
+
+    .resetpassword a {
+        color: blue;
+        font-size: 14px;
+        text-decoration: none
+    }
+
+        .resetpassword a:hover {
+            text-decoration: underline
+        }
+
+

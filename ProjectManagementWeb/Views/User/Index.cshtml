@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Main";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<div class="row" style="--bs-gutter-x:0px">
+    <div class="col-md-5" id="div-left">
+        <div class="content">
+            <p id="content1">
+                SyncMaster giúp các nhóm quản
+                lý dự án và nhiệm vụ dễ
+                dàng hơn
+            </p>
+            <p id="content2">
+                Đơn giản, linh hoạt và mạnh mẽ. Chỉ cần bảng, danh sách và
+                thẻ là có thể biết rõ ai đang làm gì và cần phải làm gì.
+            </p>
+        </div>
+        <p id="content4">
+            NHỮNG GÌ BẠN NHẬN ĐƯỢC TRONG GÓI MIỄN PHÍ:
+        </p>
+        <ul>
+            <li id="content5">
+                Thẻ không giới hạn
+            </li>
+            <li id="content5">
+                Power-Up không giới hạn cho mỗi bảng
+            </li>
+        </ul>
+        <button class="submit-btn" type="submit" id="sign-up">Đăng ký</button>
+        <script>
+            document.getElementById('sign-up').addEventListener('click', function () {
+                window.location.href = '/Relog/Register';
+            });
+        </script>
+    </div>
+
+    <div class="col-md-7" id="div-right">
+        <img src="~/Content/images/pic1.gif" id="picture" style="max-width: 100%;" />
+    </div>
+</div>
+
+

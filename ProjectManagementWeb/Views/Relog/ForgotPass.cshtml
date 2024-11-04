@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ForgotPass";
+    Layout = "~/Views/Shared/_LayoutRelog.cshtml";
+}
+
+<div class="container">
+    <div class="logo">
+        <img src="~/Content/images/logo_syncmaster.png" alt="Logo">
+    </div>
+    <form>
+        <div style="text-align:center">
+            <p>Bạn không đăng nhập được ?</p>
+        </div>
+        <div style="font-size:10px;margin-bottom:20px">
+            <label for="Text" style="display: block; margin-bottom: 7px; ">Chúng tôi sẽ gửi liên kết khôi phục đến</label>
+            <input type="email" id="email" placeholder="Nhập địa chỉ email" style=" width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;">
+        </div>
+        <div class="form-group">
+            <button>Gửi đường liên kết khôi phục</button>
+        </div>
+        <div class="resetpassword">
+            <a href="@Url.Action("Login","Relog")">Quay lại đăng nhập</a>
+        </div>
+    </form>
+</div>
+
+

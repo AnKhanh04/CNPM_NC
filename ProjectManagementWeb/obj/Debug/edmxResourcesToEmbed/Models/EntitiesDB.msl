@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QL_DAModelStoreContainer" CdmEntityContainer="QL_DAEntities">
+    <EntitySetMapping Name="DuAn">
+      <EntityTypeMapping TypeName="QL_DAModel.DuAn">
+        <MappingFragment StoreEntitySet="DuAn">
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="NganSach" ColumnName="NganSach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LichSuNhiemVu">
+      <EntityTypeMapping TypeName="QL_DAModel.LichSuNhiemVu">
+        <MappingFragment StoreEntitySet="LichSuNhiemVu">
+          <ScalarProperty Name="LichSuID" ColumnName="LichSuID" />
+          <ScalarProperty Name="NhiemVuID" ColumnName="NhiemVuID" />
+          <ScalarProperty Name="NguoiThayDoiID" ColumnName="NguoiThayDoiID" />
+          <ScalarProperty Name="MoTaThayDoi" ColumnName="MoTaThayDoi" />
+          <ScalarProperty Name="NgayThayDoi" ColumnName="NgayThayDoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NganSach">
+      <EntityTypeMapping TypeName="QL_DAModel.NganSach">
+        <MappingFragment StoreEntitySet="NganSach">
+          <ScalarProperty Name="NganSachID" ColumnName="NganSachID" />
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NguoiDung">
+      <EntityTypeMapping TypeName="QL_DAModel.NguoiDung">
+        <MappingFragment StoreEntitySet="NguoiDung">
+          <ScalarProperty Name="NguoiDungID" ColumnName="NguoiDungID" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="LanDangNhapCuoi" ColumnName="LanDangNhapCuoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhiemVu">
+      <EntityTypeMapping TypeName="QL_DAModel.NhiemVu">
+        <MappingFragment StoreEntitySet="NhiemVu">
+          <ScalarProperty Name="NhiemVuID" ColumnName="NhiemVuID" />
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="NguoiDuocGiaoID" ColumnName="NguoiDuocGiaoID" />
+          <ScalarProperty Name="TenNhiemVu" ColumnName="TenNhiemVu" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="HanHoanThanh" ColumnName="HanHoanThanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhanHoi">
+      <EntityTypeMapping TypeName="QL_DAModel.PhanHoi">
+        <MappingFragment StoreEntitySet="PhanHoi">
+          <ScalarProperty Name="PhanHoiID" ColumnName="PhanHoiID" />
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="NguoiDungID" ColumnName="NguoiDungID" />
+          <ScalarProperty Name="NoiDungPhanHoi" ColumnName="NoiDungPhanHoi" />
+          <ScalarProperty Name="NgayPhanHoi" ColumnName="NgayPhanHoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhanTichRuiRo">
+      <EntityTypeMapping TypeName="QL_DAModel.PhanTichRuiRo">
+        <MappingFragment StoreEntitySet="PhanTichRuiRo">
+          <ScalarProperty Name="RuiRoID" ColumnName="RuiRoID" />
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="MoTaRuiRo" ColumnName="MoTaRuiRo" />
+          <ScalarProperty Name="MucDoRuiRo" ColumnName="MucDoRuiRo" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuyenTruyCap">
+      <EntityTypeMapping TypeName="QL_DAModel.QuyenTruyCap">
+        <MappingFragment StoreEntitySet="QuyenTruyCap">
+          <ScalarProperty Name="QuyenTruyCapID" ColumnName="QuyenTruyCapID" />
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="NguoiDungID" ColumnName="NguoiDungID" />
+          <ScalarProperty Name="CapQuyen" ColumnName="CapQuyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sprint">
+      <EntityTypeMapping TypeName="QL_DAModel.Sprint">
+        <MappingFragment StoreEntitySet="Sprint">
+          <ScalarProperty Name="SprintID" ColumnName="SprintID" />
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="TenSprint" ColumnName="TenSprint" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiLieu">
+      <EntityTypeMapping TypeName="QL_DAModel.TaiLieu">
+        <MappingFragment StoreEntitySet="TaiLieu">
+          <ScalarProperty Name="TaiLieuID" ColumnName="TaiLieuID" />
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="TenFile" ColumnName="TenFile" />
+          <ScalarProperty Name="DuongDan" ColumnName="DuongDan" />
+          <ScalarProperty Name="NgayTaiLen" ColumnName="NgayTaiLen" />
+          <ScalarProperty Name="NguoiTaiLenID" ColumnName="NguoiTaiLenID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThanhVienDuAn">
+      <EntityTypeMapping TypeName="QL_DAModel.ThanhVienDuAn">
+        <MappingFragment StoreEntitySet="ThanhVienDuAn">
+          <ScalarProperty Name="DuAnID" ColumnName="DuAnID" />
+          <ScalarProperty Name="NguoiDungID" ColumnName="NguoiDungID" />
+          <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+          <ScalarProperty Name="NgayThamGia" ColumnName="NgayThamGia" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThongBao">
+      <EntityTypeMapping TypeName="QL_DAModel.ThongBao">
+        <MappingFragment StoreEntitySet="ThongBao">
+          <ScalarProperty Name="ThongBaoID" ColumnName="ThongBaoID" />
+          <ScalarProperty Name="NguoiDungID" ColumnName="NguoiDungID" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="DaXem" ColumnName="DaXem" />
+          <ScalarProperty Name="NgayGui" ColumnName="NgayGui" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

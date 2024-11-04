@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_DAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DuAn">
+    <Key>
+      <PropertyRef Name="DuAnID" />
+    </Key>
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="100" />
+    <Property Name="NgayBatDau" Type="date" />
+    <Property Name="NgayKetThuc" Type="date" />
+    <Property Name="NganSach" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="LichSuNhiemVu">
+    <Key>
+      <PropertyRef Name="LichSuID" />
+    </Key>
+    <Property Name="LichSuID" Type="int" Nullable="false" />
+    <Property Name="NhiemVuID" Type="int" />
+    <Property Name="NguoiThayDoiID" Type="int" />
+    <Property Name="MoTaThayDoi" Type="nvarchar" MaxLength="200" />
+    <Property Name="NgayThayDoi" Type="date" />
+  </EntityType>
+  <EntityType Name="NganSach">
+    <Key>
+      <PropertyRef Name="NganSachID" />
+    </Key>
+    <Property Name="NganSachID" Type="int" Nullable="false" />
+    <Property Name="DuAnID" Type="int" />
+    <Property Name="SoTien" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MoTa" Type="text" />
+    <Property Name="NgayCapNhat" Type="date" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="NguoiDungID" />
+    </Key>
+    <Property Name="NguoiDungID" Type="int" Nullable="false" />
+    <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="HoTen" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="VaiTro" Type="varchar" MaxLength="50" />
+    <Property Name="NgayTao" Type="date" />
+    <Property Name="LanDangNhapCuoi" Type="date" />
+  </EntityType>
+  <EntityType Name="NhiemVu">
+    <Key>
+      <PropertyRef Name="NhiemVuID" />
+    </Key>
+    <Property Name="NhiemVuID" Type="int" Nullable="false" />
+    <Property Name="DuAnID" Type="int" />
+    <Property Name="NguoiDuocGiaoID" Type="int" />
+    <Property Name="TenNhiemVu" Type="varchar" MaxLength="255" />
+    <Property Name="MoTa" Type="text" />
+    <Property Name="TrangThai" Type="varchar" MaxLength="50" />
+    <Property Name="NgayTao" Type="date" />
+    <Property Name="HanHoanThanh" Type="date" />
+  </EntityType>
+  <EntityType Name="PhanHoi">
+    <Key>
+      <PropertyRef Name="PhanHoiID" />
+    </Key>
+    <Property Name="PhanHoiID" Type="int" Nullable="false" />
+    <Property Name="DuAnID" Type="int" />
+    <Property Name="NguoiDungID" Type="int" />
+    <Property Name="NoiDungPhanHoi" Type="nvarchar" MaxLength="500" />
+    <Property Name="NgayPhanHoi" Type="date" />
+  </EntityType>
+  <EntityType Name="PhanTichRuiRo">
+    <Key>
+      <PropertyRef Name="RuiRoID" />
+    </Key>
+    <Property Name="RuiRoID" Type="int" Nullable="false" />
+    <Property Name="DuAnID" Type="int" />
+    <Property Name="MoTaRuiRo" Type="text" />
+    <Property Name="MucDoRuiRo" Type="varchar" MaxLength="50" />
+    <Property Name="NgayTao" Type="date" />
+  </EntityType>
+  <EntityType Name="QuyenTruyCap">
+    <Key>
+      <PropertyRef Name="QuyenTruyCapID" />
+    </Key>
+    <Property Name="QuyenTruyCapID" Type="int" Nullable="false" />
+    <Property Name="DuAnID" Type="int" />
+    <Property Name="NguoiDungID" Type="int" />
+    <Property Name="CapQuyen" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sprint">
+    <Key>
+      <PropertyRef Name="SprintID" />
+    </Key>
+    <Property Name="SprintID" Type="int" Nullable="false" />
+    <Property Name="DuAnID" Type="int" />
+    <Property Name="TenSprint" Type="varchar" MaxLength="255" />
+    <Property Name="NgayBatDau" Type="date" />
+    <Property Name="NgayKetThuc" Type="date" />
+  </EntityType>
+  <EntityType Name="TaiLieu">
+    <Key>
+      <PropertyRef Name="TaiLieuID" />
+    </Key>
+    <Property Name="TaiLieuID" Type="int" Nullable="false" />
+    <Property Name="DuAnID" Type="int" />
+    <Property Name="TenFile" Type="varchar" MaxLength="255" />
+    <Property Name="DuongDan" Type="text" />
+    <Property Name="NgayTaiLen" Type="date" />
+    <Property Name="NguoiTaiLenID" Type="int" />
+  </EntityType>
+  <EntityType Name="ThanhVienDuAn">
+    <Key>
+      <PropertyRef Name="DuAnID" />
+      <PropertyRef Name="NguoiDungID" />
+    </Key>
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="NguoiDungID" Type="int" Nullable="false" />
+    <Property Name="VaiTro" Type="varchar" MaxLength="50" />
+    <Property Name="NgayThamGia" Type="date" />
+    <Property Name="NgayKetThuc" Type="date" />
+  </EntityType>
+  <EntityType Name="ThongBao">
+    <Key>
+      <PropertyRef Name="ThongBaoID" />
+    </Key>
+    <Property Name="ThongBaoID" Type="int" Nullable="false" />
+    <Property Name="NguoiDungID" Type="int" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="300" />
+    <Property Name="DaXem" Type="bit" />
+    <Property Name="NgayGui" Type="date" />
+  </EntityType>
+  <EntityContainer Name="QL_DAModelStoreContainer">
+    <EntitySet Name="DuAn" EntityType="Self.DuAn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LichSuNhiemVu" EntityType="Self.LichSuNhiemVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NganSach" EntityType="Self.NganSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NguoiDung" EntityType="Self.NguoiDung" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhiemVu" EntityType="Self.NhiemVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhanHoi" EntityType="Self.PhanHoi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhanTichRuiRo" EntityType="Self.PhanTichRuiRo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuyenTruyCap" EntityType="Self.QuyenTruyCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sprint" EntityType="Self.Sprint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiLieu" EntityType="Self.TaiLieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThanhVienDuAn" EntityType="Self.ThanhVienDuAn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThongBao" EntityType="Self.ThongBao" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

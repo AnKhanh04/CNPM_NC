@@ -1,0 +1,116 @@
+﻿@*@using PagedList.Mvc;
+    @using ProjectManagementWeb.Models;
+    @model PagedList.PagedList<ProjectManagementWeb.Models.tblDuan>*@
+@{
+    ViewBag.Title = "HomeAdmin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+
+<div style="margin-left:3%">
+    <h2 style="margin-top:1%">Quản lý tổng quan</h2>
+    <button type="submit" style="height:30px;margin-top:1%;margin-bottom:2%">
+        <p>
+            @Html.ActionLink("Dự án", "Create", null, new { @class = "btn-link" })
+        </p>
+    </button>
+</div>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.First().codeProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().nameProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().imageProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().idAu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().IDCate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().idPub)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().RemainProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().priceProduct)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.First().descriptionProduct)
+        </th>*@
+
+    <th>Tùy chỉnh</th>
+    </tr>
+
+    @*@foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.codeProduct)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nameProduct)
+                </td>
+                <td>
+                    <img src="@Url.Content(item.imageProduct)" height="100" width="80" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblAuthor.nameAu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblCategories.nameCate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblPublisher.PublisherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RemainProduct)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.priceProduct)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.descriptionProduct)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn-link" })<br />
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }, new { @class = "btn-link" })<br />
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.ID }, new { @class = "btn-link" })
+                </td>
+            </tr>
+        }*@
+
+</table>
+<div style="margin-left:3%">
+    @*<div style="margin-left:1%"> Trang @(Model.PageCount < Model.PageNumber? 0: Model.PageNumber) / @Model.PageCount</div>*@
+    @*@Html.PagedListPager(Model, page => Url.Action("Home", new { page = page }))*@
+</div>
+<style>
+    .pagination-container li {
+        margin-left: 1%;
+    }
+
+    .active a {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .pagination li a {
+        text-decoration: none;
+    }
+
+    .PagedList-skipToNext {
+        margin-left: 5px;
+    }
+</style>

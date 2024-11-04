@@ -1,0 +1,48 @@
+﻿@model ProjectManagementWeb.Models.NguoiDung
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutRelog.cshtml";
+}
+
+<div class="container">
+    <div class="logo">
+        <img src="~/Content/images/logo_syncmaster.png" alt="Logo">
+    </div>
+    @using (Html.BeginForm("AuthenLogin", "Relog", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            <label for="email">Tên đăng nhập</label>
+            @Html.TextBoxFor(m => m.Email, new { @id = "email", @placeholder = "Nhập tài khoản", @required = "required" })
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            @Html.PasswordFor(m => m.MatKhau, new { @id = "password", @placeholder = "Nhập password của bạn", @required = "required" })
+            @Html.ValidationMessageFor(m => m.MatKhau)
+        </div>
+        <div class="form-group">
+            <button id="login">Đăng nhập</button>
+            @*<script>
+                document.getElementById('login').addEventListener('click', function (event) {
+                    event.preventDefault();
+                    window.location.href = '/User/DuAn';
+                });
+            </script>*@
+
+        </div>
+        <div style="text-align: center; color: #777777">
+            <p>Hoặc tiếp tục với:</p>
+        </div>
+        <div class="social-login">
+            <a href="#"><img src="~/Content/images/logofbb.png" alt="Facebook" style="width:30px"> Facebook</a>
+            <a href="#"><img src="~/Content/images/logogg.png" alt="Google" style="width:27px"> Google</a>
+        </div>
+        <div class="resetpassword">
+            <a href="@Url.Action("ForgotPass","Relog")">Bạn không đăng nhập được?</a>
+            <b>•</b>
+            <a href="@Url.Action("Register","Relog")">Tạo tài khoản</a>
+        </div>
+    }
+</div>
